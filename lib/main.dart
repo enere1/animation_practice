@@ -1,7 +1,12 @@
 import 'package:animation_practice_udemy/component/animated_container_example.dart';
+import 'package:animation_practice_udemy/component/animated_cross_fade_example.dart';
+import 'package:animation_practice_udemy/component/animated_list_state_example.dart';
 import 'package:animation_practice_udemy/component/animated_opacity_example.dart';
 import 'package:animation_practice_udemy/component/animated_padding_example.dart';
 import 'package:animation_practice_udemy/component/animated_physical_example.dart';
+import 'package:animation_practice_udemy/component/animated_positioned_direct_example.dart';
+import 'package:animation_practice_udemy/component/animated_positioned_example.dart';
+import 'package:animation_practice_udemy/component/animated_switcher_example.dart';
 import 'package:animation_practice_udemy/component/animated_text_example.dart';
 import 'package:flutter/material.dart';
 
@@ -42,57 +47,106 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Center(
             child: ListView(
-              physics: const BouncingScrollPhysics(),
-              children: [
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimatedAlignExample()));
-                    },
-                    child: const Text("AnimatedAlignExample")),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimatedContainerExample()));
-                    },
-                    child: const Text("AnimatedContainerExample")),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimatedTextExample()));
-                    },
-                    child: const Text("AnimatedTextExample")),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimatedOpacityExample()));
-                    },
-                    child: const Text("AnimatedOpacityExample")),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimatedPaddingExample()));
-                    },
-                    child: const Text("AnimatedPaddingExample")),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimatedPhysicalExample()));
-                    },
-                    child: const Text("AnimatedPhysicalExample"))
-              ],
-            )));
+          physics: const BouncingScrollPhysics(),
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AnimatedAlignExample()));
+                },
+                child: const Text("AnimatedAlignExample")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const AnimatedContainerExample()));
+                },
+                child: const Text("AnimatedContainerExample")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AnimatedTextExample()));
+                },
+                child: const Text("AnimatedTextExample")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const AnimatedOpacityExample()));
+                },
+                child: const Text("AnimatedOpacityExample")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const AnimatedPaddingExample()));
+                },
+                child: const Text("AnimatedPaddingExample")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const AnimatedPhysicalExample()));
+                },
+                child: const Text("AnimatedPhysicalExample")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const AnimatedPositionedExample()));
+                },
+                child: const Text("AnimatedPositionedExample")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const AnimatedPositionedDirectExample()));
+                },
+                child: const Text("AnimatedPositionedDirectExample")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const AnimatedCrossFadeExample()));
+                },
+                child: const Text("AnimatedCrossFadeExample")),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AnimatedSwitcherExample()));
+              },
+              child: const Text("AnimatedSwitcherExample"),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const AnimatedListStateExample()));
+                },
+                child: const Text("AnimatedListStateExample"))
+          ],
+        )));
   }
 }

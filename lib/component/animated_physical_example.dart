@@ -9,19 +9,34 @@ class AnimatedPhysicalExample extends StatefulWidget {
 }
 
 class _AnimatedPhysicalExampleState extends State<AnimatedPhysicalExample> {
+  bool _isPressed = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('AnimatedPaddingExample'),
+          title: const Text('AnimatedPhysicalExample'),
         ),
-        body: AnimatedPhysicalModel(shape: null,
-        elevation: null,
-        color: null,
-        shadowColor: null,
-        duration: null,
-        child: null,
-          
+        body: GestureDetector(
+          onTap: () {
+            setState(() {
+              _isPressed = !_isPressed;
+            });
+          },
+          child: Center(
+            child: AnimatedPhysicalModel(
+              shape: BoxShape.rectangle,
+              elevation: _isPressed ? 90 : 0,
+              color: Colors.grey,
+              shadowColor: Colors.blueGrey,
+              duration: Duration(milliseconds: 400),
+              child: Container(
+                width: 200,
+                height: 200,
+                child: Image.asset('assets/tom.png'),
+              ),
+            ),
+          ),
         )
     );
   }
